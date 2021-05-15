@@ -1,45 +1,67 @@
-<form [formGroup]="recordForm" (ngSubmit)="onSubmit()">
-  
-  <label>
-    Nome:
-    <input type="text" formControlName="nameItem" required>
-  </label>
+<div class="form-container">
+  <!-- -->
+  <form [formGroup]="recordForm" (ngSubmit)="onSubmit()">
+    
+    <label>
+      Nome:
+      <input type="text" formControlName="nameItem" required>
+    </label>
 
-  <label>
-    Unidade de medida:
-    <input type="text" formControlName="unitMeasurement">
-  </label>
+    <div>
+      <label>
+        Unidade de medida:
+        <select type="text" formControlName="unitMeasurement">
+          <option value="km">quilômetro</option>
+          <option value="m">metro</option>
+          <option value="cm">centímetro</option>
+          <option value="mm">milímetro</option>
+          <option value="kg">quilograma</option>
+          <option value="g">grama</option>
+          <option value="mg">miligrama</option>
+          <option value="l">litro</option>
+          <option value="ml">mililitro</option>
+        </select>
+      </label>
+      
+      <label>
+        Quantidade:
+        <input type="number" formControlName="quantity">
+      </label>
 
-  <label>
-    Quantidade:
-    <input type="text" formControlName="quantity">
-  </label>
+      <label>
+        Preço:
+        <input type="number" formControlName="price">
+      </label>
+    </div>
 
-  <label>
-    Preço:
-    <input type="text" formControlName="price">
-  </label>
+    <div>
+      <label>
+        Dados de validade:
+        <input type="date" formControlName="validityData">
+      </label>
 
-  <label>
-    Produto perecível:
-    <input type="text" formControlName="perishableProduct">
-  </label>
+      <label>
+        Data de fabricação:
+        <input type="date" formControlName="dateManufacture">
+      </label>
+    </div>
 
-  <label>
-    Dados de validade:
-    <input type="text" formControlName="validityData">
-  </label>
+    <div class="checked">
+      <label>
+        Produto perecível:
+        <input type="checkbox" formControlName="perishableProduct">
+      </label>
+    </div>
 
-  <label>
-    Data de fabricação:
-    <input type="text" formControlName="dateManufacture">
-  </label>
+    <button type="submit">Cadastrar</button>
 
-  <button type="submit">Cadastrar</button>
+  </form>
 
-</form>
+  <br/>
+  <p>
+    Form value: {{ recordForm.value | json }}
+  </p>
 
-<br/>
-<p>
-  Form Status: {{ recordForm.status }}
-</p>
+
+
+</div>
