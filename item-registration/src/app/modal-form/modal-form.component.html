@@ -1,0 +1,45 @@
+<form [formGroup]="recordForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+    Nome:
+    <input type="text" formControlName="nameItem" required>
+  </label>
+
+  <label>
+    Unidade de medida:
+    <input type="text" formControlName="unitMeasurement">
+  </label>
+
+  <label>
+    Quantidade:
+    <input type="text" formControlName="quantity">
+  </label>
+
+  <label>
+    Preço:
+    <input type="text" formControlName="price">
+  </label>
+
+  <label>
+    Produto perecível:
+    <input type="text" formControlName="perishableProduct">
+  </label>
+
+  <label>
+    Dados de validade:
+    <input type="text" formControlName="validityData">
+  </label>
+
+  <label>
+    Data de fabricação:
+    <input type="text" formControlName="dateManufacture">
+  </label>
+
+  <button type="submit">Cadastrar</button>
+
+</form>
+
+<br/>
+<p>
+  Form Status: {{ recordForm.status }}
+</p>

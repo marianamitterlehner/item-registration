@@ -1,0 +1,32 @@
+.container-table{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+ 
+  table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+ 
+    th{
+      color: #363F5F;
+      font-weight: 500;
+      padding: 1rem 1rem;
+      text-align: center; //left
+      line-height: 1rem;
+    }
+ 
+    tbody td{ 
+      padding: 1rem 1rem;
+      border: 0;
+      background: #FFFFFF;
+      color: #969CB3;
+      text-align: center;
+      border-radius: 0.25rem;
+ 
+        &:first-child {
+        color: #363F5F;
+      }
+    }
+  }
+}
+ 
