@@ -38,7 +38,7 @@ export class ModalFormComponent {
       this.records = records;
     });
   }
-  // copia o carro para ser editado.
+  // copia o record para ser editado.
   editRecord(record: Records) {
     this.record = { ...record };
   }

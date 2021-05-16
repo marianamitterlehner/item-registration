@@ -30,6 +30,7 @@
           <option value="mg">miligrama</option>
           <option value="l">litro</option>
           <option value="ml">mililitro</option>
+          <option value="un">unidade</option>
         </select>
       </label>
       
@@ -54,18 +55,18 @@
 
     <div>
       <label>
-        Dados de validade:
-        <input type="date"
-        [(ngModel)]="record.validityData" 
-        id="validityData" name="validityData" 
-        required class="form-control">
-      </label>
-
-      <label>
         Data de fabricação:
         <input type="date" 
         [(ngModel)]="record.dateManufacture" 
         id="dateManufacture" name="dateManufacture" 
+        required class="form-control">
+      </label>
+
+      <label>
+        Dados de validade:
+        <input type="date"
+        [(ngModel)]="record.validityData" 
+        id="validityData" name="validityData" 
         required class="form-control">
       </label>
     </div>
@@ -74,9 +75,10 @@
       <label>
         Produto perecível:
         <input type="checkbox"
+        ng-model="check" 
         [(ngModel)]="record.perishableProduct" 
         id="perishableProduct" name="perishableProduct" 
-        required class="form-control">
+        class="form-control">
       </label>
     </div>
     <div class="button">

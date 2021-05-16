@@ -19,6 +19,15 @@
       "dateManufacture": "2021-07-27",
       "perishableProduct": true,
       "id": 2
+    },
+    {
+      "nameItem": "vinho",
+      "unitMeasurement": "l",
+      "quantity": 35,
+      "price": 25.3998,
+      "dateManufacture": "2020-06-20",
+      "validityData": "2025-02-13",
+      "id": 3
     }
   ]
 }
