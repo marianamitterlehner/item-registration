@@ -1,5 +1,6 @@
 <div class="form-container">
-  <!-- -->
+  <!-- Form de cadastro de produtos -->
+  <h1>Cadastro de produtos</h1>
   <form (ngSubmit)="f.form.valid && saveRecord(f)" #f="ngForm" novalidate>
     
     <label>
@@ -71,16 +72,16 @@
     <div class="checked">
       <label>
         Produto perecível:
-        <input type="checkbox" formControlName="perishableProduct"
+        <input type="checkbox"
         [(ngModel)]="record.perishableProduct" 
         id="perishableProduct" name="perishableProduct" 
         required class="form-control">
       </label>
     </div>
-
-    <button type="submit"> Salvar </button>
-    <button type="reset" (click)="cleanForm(f)"> Cancelar </button>
-
+    <div class="button">
+      <button type="submit"> Salvar </button>
+     <a [routerLink]="['/']" > <button type="reset" (click)="cleanForm(f)"> Cancelar </button> </a>
+    </div>
   </form>
 
 </div>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, NgForm } from '@angular/forms';
-import { Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Records } from '../models/records';
 import { RecordService } from '../services/records.service';
 
@@ -20,20 +19,16 @@ export class ModalFormComponent {
     this.getRecord();
   }
 
-  // defini se um record será criado ou atualizado
+  // criação de um record
   saveRecord(form: NgForm) {
-    if (this.record.id !== undefined) {
-      this.recordService.updateRecord(this.record).subscribe(() => {
-        this.cleanForm(form);
-      });
-    } else {
+    if (this.record.id == undefined) {
       this.recordService.saveRecord(this.record).subscribe(() => {
         this.cleanForm(form);
       });
     }
   }
 
-  // Chama o serviço para obtém todos os record
+  // Chama o serviço para obter todos os records
   getRecord() {
     this.recordService.getRecord().subscribe((records: Records[]) => {
       this.records = records;
@@ -45,11 +40,6 @@ export class ModalFormComponent {
     this.recordService.deleteRecord(record).subscribe(() => {
       this.getRecord();
     });
-  }
-
-  // copia um record para ser editado.
-  editRecord(record: Records) {
-    this.record = { ...record };
   }
 
   // limpa o formulario

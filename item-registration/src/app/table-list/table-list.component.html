@@ -1,4 +1,5 @@
 <div class="container-table">
+  <!-- Tabela de items-->
   <table>
     <thead>
       <tr>
@@ -7,9 +8,9 @@
         <th scope="col">Unidade de medida</th>
         <th scope="col">Quantidade</th>
         <th scope="col">Preço</th>
-        <th scope="col">Produto perecível</th>
         <th scope="col">Data de validade</th>
         <th scope="col">Data de fabricação</th>
+        <th scope="col">Produto perecível</th>
       </tr>
     </thead>
     <tbody>
@@ -19,11 +20,10 @@
         <td>{{record.unitMeasurement}}</td>
         <td>{{record.quantity}}</td>
         <td>{{record.price}}</td>
-        <td>{{record.perishableProduct}}</td>
         <td>{{record.validityData}}</td>
         <td>{{record.dateManufacture}}</td>
+        <td>{{record.perishableProduct}}</td>
         <td> 
-          <button type="button" class="btn-editor" (click)="editRecord(record)">Editar</button>
           <button type="button" class="btn-delete" (click)="deleteRecord(record)">Deletar</button>
         </td>
       </tr>

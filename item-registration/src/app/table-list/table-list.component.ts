@@ -19,20 +19,7 @@ export class TableListComponent implements OnInit {
     this.getRecord();
   }
 
-  // defini se um record será criado ou atualizado
-  saveRecord(form: NgForm) {
-    if (this.record.id !== undefined) {
-      this.recordService.updateRecord(this.record).subscribe(() => {
-        this.cleanForm(form);
-      });
-    } else {
-      this.recordService.saveRecord(this.record).subscribe(() => {
-        this.cleanForm(form);
-      });
-    }
-  }
-
-  // Chama o serviço para obtém todos os record
+  // obtém todos os record
   getRecord() {
     this.recordService.getRecord().subscribe((records: Records[]) => {
       this.records = records;
@@ -44,18 +31,6 @@ export class TableListComponent implements OnInit {
     this.recordService.deleteRecord(record).subscribe(() => {
       this.getRecord();
     });
-  }
-
-  // copia um record para ser editado.
-  editRecord(record: Records) {
-    this.record = { ...record };
-  }
-
-  // limpa o formulario
-  cleanForm(form: NgForm) {
-    this.getRecord();
-    form.resetForm();
-    this.record = {} as Records;
   }
 
 }
