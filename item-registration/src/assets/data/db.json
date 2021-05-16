@@ -1,81 +1,24 @@
 {
   "record": [
     {
-      "id": 2,
-      "nameItem": "mamao",
+      "nameItem": "manteiga",
       "unitMeasurement": "kg",
-      "quantity": 6,
-      "price": 8.4,
+      "quantity": 3,
+      "price": 10.36,
+      "validityData": "2021-04-28",
+      "dateManufacture": "2021-06-04",
       "perishableProduct": true,
-      "validityData": "24-03-2021",
-      "dateManufacture": "03-02-2021"
-    },
-    {
-      "id": 3,
-      "nameItem": "leite",
-      "unitMeasurement": "l",
-      "quantity": 7,
-      "price": 4.58,
-      "perishableProduct": false,
-      "validityData": "24-03-2021",
-      "dateManufacture": "03-02-2021"
-    },
-    {
-      "id": 4,
-      "nameItem": "farinha",
-      "unitMeasurement": "kg",
-      "quantity": 2,
-      "price": 4.6,
-      "perishableProduct": false,
-      "validityData": "24-03-2021",
-      "dateManufacture": "03-02-2021"
-    },
-    {
-      "id": 7,
-      "nameItem": "guarana",
-      "unitMeasurement": "l",
-      "quantity": 25,
-      "price": 9.41,
-      "perishableProduct": false,
-      "validityData": "24-03-2021",
-      "dateManufacture": "03-02-2021"
+      "id": 1
     },
     {
       "nameItem": "suco",
       "unitMeasurement": "l",
-      "quantity": 1,
-      "price": 5.95,
-      "validityData": "2021-05-18",
-      "dateManufacture": "2021-05-04",
-      "id": 8
-    },
-    {
-      "nameItem": "manteiga",
-      "unitMeasurement": "kg",
-      "quantity": 8,
-      "price": 7.89,
-      "validityData": "2021-05-20",
-      "dateManufacture": "2021-05-07",
-      "id": 9
-    },
-    {
-      "nameItem": "vinho",
-      "unitMeasurement": "l",
-      "quantity": 7,
-      "price": 20.36,
-      "validityData": "2021-05-28",
-      "dateManufacture": "2021-05-14",
-      "id": 10
-    },
-    {
-      "nameItem": "majericão",
-      "unitMeasurement": "kg",
-      "quantity": 2,
-      "price": 7.36,
-      "dateManufacture": "2021-05-06",
+      "quantity": 5,
+      "price": 6.23,
+      "validityData": "2021-05-03",
+      "dateManufacture": "2021-07-27",
       "perishableProduct": true,
-      "validityData": "2021-05-30",
-      "id": 11
+      "id": 2
     }
   ]
 }

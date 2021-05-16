@@ -25,6 +25,10 @@ export class TableListComponent implements OnInit {
       this.records = records;
     });
   }
+    // copia o carro para ser editado.
+    editRecord(record: Records) {
+      this.record = { ...record };
+    }
 
   // deleta um record
   deleteRecord(record: Records) {

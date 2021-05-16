@@ -19,12 +19,13 @@
         <td>{{record.nameItem}}</td>
         <td>{{record.unitMeasurement}}</td>
         <td>{{record.quantity}}</td>
-        <td>{{record.price}}</td>
-        <td>{{record.validityData}}</td>
-        <td>{{record.dateManufacture}}</td>
-        <td>{{record.perishableProduct}}</td>
+        <td>{{record.price | currency:"BRL"}}</td>
+        <td>{{record.validityData | date:"dd/MM/yyyy"}}</td>
+        <td>{{record.dateManufacture | date:"dd/MM/yyyy"}}</td>
+        <td>{{record.perishableProduct}}</td> 
         <td> 
-          <button type="button" class="btn-delete" (click)="deleteRecord(record)">Deletar</button>
+          <button type="button"  (click)="editRecord(record)">Editar</button>
+          <button type="button"  (click)="deleteRecord(record)">Deletar</button>
         </td>
       </tr>
     </tbody>

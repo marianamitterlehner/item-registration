@@ -21,7 +21,11 @@ export class ModalFormComponent {
 
   // criação de um record
   saveRecord(form: NgForm) {
-    if (this.record.id == undefined) {
+      if (this.record.id !== undefined) {
+        this.recordService.updateRecord(this.record).subscribe(() => {
+          this.cleanForm(form);
+        });
+      } else {
       this.recordService.saveRecord(this.record).subscribe(() => {
         this.cleanForm(form);
       });
@@ -34,7 +38,10 @@ export class ModalFormComponent {
       this.records = records;
     });
   }
-
+  // copia o carro para ser editado.
+  editRecord(record: Records) {
+    this.record = { ...record };
+  }
   // deleta um record
   deleteRecord(record: Records) {
     this.recordService.deleteRecord(record).subscribe(() => {
