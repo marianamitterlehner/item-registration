@@ -2,51 +2,30 @@
   <table>
     <thead>
       <tr>
-        <th>Nome do item</th>
-        <th>Unidade de medida</th>
-        <th>Quantidade</th>
-        <th>Preço</th>
-        <th>Produto perecível</th>
-        <th>Data de validade</th>
-        <th>Data de fabricação</th>
+        <th scope="col">id</th>
+        <th scope="col">Nome do item</th>
+        <th scope="col">Unidade de medida</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Produto perecível</th>
+        <th scope="col">Data de validade</th>
+        <th scope="col">Data de fabricação</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Limao</td>
-        <td>kg</td>
-        <td>100</td>
-        <td>$100</td>
-        <td>nao</td>
-        <td>24/01/2021</td>
-        <td>24/12/2020</td>
-      </tr>
-      <tr>
-        <td>Limao</td>
-        <td>kg</td>
-        <td>100</td>
-        <td>$100</td>
-        <td>nao</td>
-        <td>24/01/2021</td>
-        <td>24/12/2020</td>
-      </tr>
-      <tr>
-        <td>Limao</td>
-        <td>kg</td>
-        <td>100</td>
-        <td>$100</td>
-        <td>nao</td>
-        <td>24/01/2021</td>
-        <td>24/12/2020</td>
-      </tr>
-      <tr>
-        <td>Limao</td>
-        <td>kg</td>
-        <td>100</td>
-        <td>$100</td>
-        <td>nao</td>
-        <td>24/01/2021</td>
-        <td>24/12/2020</td>
+      <tr *ngFor="let record of records">
+        <td>{{record.id}}</td>
+        <td>{{record.nameItem}}</td>
+        <td>{{record.unitMeasurement}}</td>
+        <td>{{record.quantity}}</td>
+        <td>{{record.price}}</td>
+        <td>{{record.perishableProduct}}</td>
+        <td>{{record.validityData}}</td>
+        <td>{{record.dateManufacture}}</td>
+        <td> 
+          <button type="button" class="btn-editor" (click)="editRecord(record)">Editar</button>
+          <button type="button" class="btn-delete" (click)="deleteRecord(record)">Deletar</button>
+        </td>
       </tr>
     </tbody>
   </table>

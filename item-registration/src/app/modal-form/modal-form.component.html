@@ -1,16 +1,25 @@
 <div class="form-container">
   <!-- -->
-  <form [formGroup]="recordForm" (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="f.form.valid && saveRecord(f)" #f="ngForm" novalidate>
     
     <label>
       Nome:
-      <input type="text" formControlName="nameItem" required>
+      <input type="text" 
+      [(ngModel)]="record.nameItem" 
+      id="nameItem" name="nameItem" 
+      required class="form-control" 
+      placeholder="Digite o Nome">
     </label>
 
     <div>
       <label>
         Unidade de medida:
-        <select type="text" formControlName="unitMeasurement">
+        <select type="text" 
+        [(ngModel)]="record.unitMeasurement" 
+        id="unitMeasurement" name="unitMeasurement" 
+        required class="form-control" 
+        placeholder="Selecione uma unidade de medida">
+
           <option value="km">quilômetro</option>
           <option value="m">metro</option>
           <option value="cm">centímetro</option>
@@ -25,43 +34,53 @@
       
       <label>
         Quantidade:
-        <input type="number" formControlName="quantity">
+        <input type="number" 
+        [(ngModel)]="record.quantity" 
+        id="quantity" name="quantity"
+        required class="form-control" >
       </label>
 
       <label>
         Preço:
-        <input type="number" formControlName="price">
+        <input type="number"    
+        [(ngModel)]="record.price" 
+        id="price" name="price" 
+        required class="form-control" 
+        placeholder="Digite o Preço">
       </label>
     </div>
 
     <div>
       <label>
         Dados de validade:
-        <input type="date" formControlName="validityData">
+        <input type="date"
+        [(ngModel)]="record.validityData" 
+        id="validityData" name="validityData" 
+        required class="form-control">
       </label>
 
       <label>
         Data de fabricação:
-        <input type="date" formControlName="dateManufacture">
+        <input type="date" 
+        [(ngModel)]="record.dateManufacture" 
+        id="dateManufacture" name="dateManufacture" 
+        required class="form-control">
       </label>
     </div>
 
     <div class="checked">
       <label>
         Produto perecível:
-        <input type="checkbox" formControlName="perishableProduct">
+        <input type="checkbox" formControlName="perishableProduct"
+        [(ngModel)]="record.perishableProduct" 
+        id="perishableProduct" name="perishableProduct" 
+        required class="form-control">
       </label>
     </div>
 
-    <button type="submit">Cadastrar</button>
+    <button type="submit"> Salvar </button>
+    <button type="reset" (click)="cleanForm(f)"> Cancelar </button>
 
   </form>
-
-  <br/>
-  <p>
-    Form value: {{ recordForm.value | json }}
-  </p>
-
-
 
 </div>

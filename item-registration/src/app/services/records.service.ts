@@ -9,7 +9,7 @@ import { Records } from '../models/records';
 })
 export class RecordService {
 
-  url = 'http://localhost:3000/records'; // api rest fake
+  url = 'http://localhost:3000/record'; // api rest fake
 
   // injetando o HttpClient
   constructor(private httpClient: HttpClient) { }
@@ -20,7 +20,7 @@ export class RecordService {
   }
 
   // Obtem todos os registros
-  getRecords(): Observable<Records[]> {
+  getRecord(): Observable<Records[]> {
     return this.httpClient.get<Records[]>(this.url)
       .pipe(
         retry(2),
