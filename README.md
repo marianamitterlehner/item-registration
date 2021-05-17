@@ -17,7 +17,7 @@ O projeto consiste em uma tabela para a listagem de produto onde é possivel del
 
 
 ## Badge
-![projeto em angular ](https://user-images.githubusercontent.com/51057747/118416497-5bfb4980-b686-11eb-9504-c031e57c17ce.jpg)
+![projeto em angular ](https://user-images.githubusercontent.com/51057747/118418599-6241f380-b68f-11eb-89fd-7d044c5bc947.jpg)
 
 
 ### Status do Projeto
