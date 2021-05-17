@@ -16,11 +16,11 @@ aprender uma tecnologia nova. Por esse motivo optei por modificar o designer par
 O projeto consiste em uma tabela para a listagem de produto onde é possivel deletar a qualquer momento o produto selecionado, e um formulario para cadastro e edição dos produtos, que funcionam com uma API fake montada em JSON Server, programado em Angular com aplicação de typescript, em cima do framework node.js.
 
 
-##Badge
+## Badge
 ![projeto em angular ](https://user-images.githubusercontent.com/51057747/118416497-5bfb4980-b686-11eb-9504-c031e57c17ce.jpg)
 
 
-###Status do Projeto
+### Status do Projeto
 
 90% concluido
 
@@ -39,7 +39,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 E para visualizar o codigo [VSCode](https://code.visualstudio.com/).
 
-### 🎲 Rodando o Back End (servidor)
+### Rodando o Back End (servidor)
 
 ```bash
 # Clone este repositório
@@ -62,7 +62,7 @@ $ ng serve
 ```
 
 
-### 🛠 Tecnologias
+### Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -88,7 +88,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
  <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQGEP93SRjmvmA/profile-displayphoto-shrink_100_100/0/1616796316494?e=1626912000&v=beta&t=RdX_TfGm1nAvlFHC3S12zAG6ru0R-wOZV9_OFq5B_qE" width="100px;" alt="Mariana"/>
  <br />
- <sub><b>Mariana Mitterlehner</b></sub></a>🚀</a>
+ <sub><b>Mariana Mitterlehner</b></sub>
 
 
 
